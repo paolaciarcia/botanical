@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */; };
-		C5A9B1BD2A3923DF00197418 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9B1BC2A3923DF00197418 /* ContentView.swift */; };
 		C5A9B1BF2A3923E000197418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1BE2A3923E000197418 /* Assets.xcassets */; };
 		C5A9B1C22A3923E000197418 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1C12A3923E000197418 /* Preview Assets.xcassets */; };
 		C5A9B1C92A39265100197418 /* PlantCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9B1C82A39265100197418 /* PlantCollectionView.swift */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		C5A9B1B72A3923DF00197418 /* Botanical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Botanical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalApp.swift; sourceTree = "<group>"; };
-		C5A9B1BC2A3923DF00197418 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5A9B1BE2A3923E000197418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A9B1C12A3923E000197418 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5A9B1C82A39265100197418 /* PlantCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionView.swift; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */,
-				C5A9B1BC2A3923DF00197418 /* ContentView.swift */,
 				C5A9B1BE2A3923E000197418 /* Assets.xcassets */,
 				C5A9B1C02A3923E000197418 /* Preview Content */,
 				C5A9B1C82A39265100197418 /* PlantCollectionView.swift */,
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A9B1BD2A3923DF00197418 /* ContentView.swift in Sources */,
 				C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */,
 				C5A9B1C92A39265100197418 /* PlantCollectionView.swift in Sources */,
 			);

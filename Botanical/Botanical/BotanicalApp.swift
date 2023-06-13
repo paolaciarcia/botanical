@@ -11,7 +11,7 @@ import SwiftUI
 struct BotanicalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlantCollectionView()
         }
     }
 }
