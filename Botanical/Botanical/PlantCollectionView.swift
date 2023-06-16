@@ -10,36 +10,42 @@ import SwiftUI
 
 struct PlantCollectionView: View {
     let colums = [
-        GridItem(.adaptive(minimum: 170), spacing: 16)
+        GridItem(.adaptive(minimum: 100), spacing: 24)
     ]
 
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVGrid(columns: colums, spacing: 16) {
-                ForEach(0...60, id: \.self) { _ in
-                    // cell
-                    ZStack {
-                        Image("placeholder-plant")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        
+        NavigationView {
+            ScrollView(.vertical) {
+                LazyVGrid(columns: colums, spacing: 16) {
+                    ForEach(0...60, id: \.self) { _ in
                         VStack {
-                            Spacer()
-                            Text("Botanical")
+                            Image("placeholder-plant")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(100)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 100, style: .continuous)
+                                        .stroke(Color.green, lineWidth: 4)
+                                }
+
+                            Text("New Plant")
                                 .multilineTextAlignment(.center)
-                                .frame(maxWidth: .infinity, minHeight: 40)
-                                .background(Gradient(colors: [.clear, .green]))
+                                .font(Font.custom("Avenir Medium", size: 22))
+                                .foregroundColor(Color.black)
+
+                            Text("Plant Specie")
+                                .multilineTextAlignment(.center)
+                                .font(Font.custom("Arial Rounded MT", size: 18))
+                                .foregroundColor(.gray)
                         }
                     }
-                    .cornerRadius(16)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 16, style: .continuous)
-                            .stroke(Color.green, lineWidth: 4)
-                    }
                 }
+                .padding()
+
             }
-            .padding()
+            .navigationTitle("Plants")
         }
+        
     }
 }
 
