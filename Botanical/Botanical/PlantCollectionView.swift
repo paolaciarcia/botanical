@@ -9,26 +9,34 @@ import Foundation
 import SwiftUI
 
 struct PlantCollectionView: View {
+    let plants = ["European Silver Fir",
+                  "Pyramidalis Silver Fir",
+                  "White Fir",
+                  "Candicans White Fir"]
+
+    @State private var searchText = ""
+
     let colums = [
-        GridItem(.adaptive(minimum: 100), spacing: 24)
+        GridItem(.adaptive(minimum: 100), spacing: 24, alignment: .top)
     ]
 
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 LazyVGrid(columns: colums, spacing: 16) {
-                    ForEach(0...60, id: \.self) { _ in
+                    ForEach(plants, id: \.self) { plant in
                         VStack {
                             Image("placeholder-plant")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .cornerRadius(100)
+
                                 .overlay {
                                     RoundedRectangle(cornerRadius: 100, style: .continuous)
                                         .stroke(Color.green, lineWidth: 4)
                                 }
 
-                            Text("New Plant")
+                            Text(plant)
                                 .multilineTextAlignment(.center)
                                 .font(Font.custom("Avenir Medium", size: 22))
                                 .foregroundColor(Color.black)
@@ -45,7 +53,7 @@ struct PlantCollectionView: View {
             }
             .navigationTitle("Plants")
         }
-        
+        .searchable(text: $searchText)
     }
 }
 
