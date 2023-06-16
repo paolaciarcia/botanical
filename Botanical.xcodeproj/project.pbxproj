@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6151DF0F2A3D17C100BF770C /* BotanicalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151DF0E2A3D17C100BF770C /* BotanicalService.swift */; };
 		6151DF112A3D20B400BF770C /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151DF102A3D20B400BF770C /* PlantModel.swift */; };
+		6151DF142A3D2A1F00BF770C /* APICLient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151DF132A3D2A1F00BF770C /* APICLient.swift */; };
+		6151DF172A3D2A6100BF770C /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151DF162A3D2A6100BF770C /* PlantList.swift */; };
 		C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */; };
 		C5A9B1BF2A3923E000197418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1BE2A3923E000197418 /* Assets.xcassets */; };
 		C5A9B1C22A3923E000197418 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1C12A3923E000197418 /* Preview Assets.xcassets */; };
@@ -15,7 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6151DF0E2A3D17C100BF770C /* BotanicalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalService.swift; sourceTree = "<group>"; };
 		6151DF102A3D20B400BF770C /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
+		6151DF132A3D2A1F00BF770C /* APICLient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICLient.swift; sourceTree = "<group>"; };
+		6151DF162A3D2A6100BF770C /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
 		C5A9B1B72A3923DF00197418 /* Botanical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Botanical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalApp.swift; sourceTree = "<group>"; };
 		C5A9B1BE2A3923E000197418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +40,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6151DF122A3D2A0300BF770C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6151DF152A3D2A3E00BF770C /* Data */,
+				6151DF0E2A3D17C100BF770C /* BotanicalService.swift */,
+				6151DF132A3D2A1F00BF770C /* APICLient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6151DF152A3D2A3E00BF770C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6151DF162A3D2A6100BF770C /* PlantList.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C5A9B1AE2A3923DF00197418 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +77,7 @@
 		C5A9B1B92A3923DF00197418 /* Botanical */ = {
 			isa = PBXGroup;
 			children = (
+				6151DF122A3D2A0300BF770C /* Network */,
 				C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */,
 				C5A9B1C82A39265100197418 /* PlantCollectionView.swift */,
 				6151DF102A3D20B400BF770C /* PlantModel.swift */,
@@ -141,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */,
+				6151DF172A3D2A6100BF770C /* PlantList.swift in Sources */,
 				C5A9B1C92A39265100197418 /* PlantCollectionView.swift in Sources */,
+				6151DF0F2A3D17C100BF770C /* BotanicalService.swift in Sources */,
+				6151DF142A3D2A1F00BF770C /* APICLient.swift in Sources */,
 				6151DF112A3D20B400BF770C /* PlantModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Botanical/Preview Content\"";
-				DEVELOPMENT_TEAM = N37W993B25;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Botanical/Preview Content\"";
-				DEVELOPMENT_TEAM = N37W993B25;
+				DEVELOPMENT_TEAM = HJ3JBWEJT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

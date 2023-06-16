@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 struct PlantCollectionView: View {
-    let plants = ["European Silver Fir",
-                  "Pyramidalis Silver Fir",
-                  "White Fir",
-                  "Candicans White Fir"]
-
+    
+    @State var plants: [PlantModel] = []
     @State private var searchText = ""
+    
+    let service = BotanicalService()
 
     let colums = [
         GridItem(.adaptive(minimum: 100), spacing: 24, alignment: .top)
@@ -24,7 +23,7 @@ struct PlantCollectionView: View {
         NavigationView {
             ScrollView(.vertical) {
                 LazyVGrid(columns: colums, spacing: 16) {
-                    ForEach(plants, id: \.self) { plant in
+                    ForEach(plants) { plant in
                         VStack {
                             Image("placeholder-plant")
                                 .resizable()
@@ -36,15 +35,16 @@ struct PlantCollectionView: View {
                                         .stroke(Color.green, lineWidth: 4)
                                 }
 
-                            Text(plant)
+                            Text(plant.name)
                                 .multilineTextAlignment(.center)
                                 .font(Font.custom("Avenir Medium", size: 22))
                                 .foregroundColor(Color.black)
 
-                            Text("Plant Specie")
+                            Text(plant.scientificName)
                                 .multilineTextAlignment(.center)
                                 .font(Font.custom("Arial Rounded MT", size: 18))
                                 .foregroundColor(.gray)
+                                
                         }
                     }
                 }
@@ -54,12 +54,30 @@ struct PlantCollectionView: View {
             .navigationTitle("Plants")
         }
         .searchable(text: $searchText)
+        .onAppear { getPlantList() }
+    }
+    
+    private func getPlantList() {
+        Task {
+            do {
+                let page = try await service.getPlantList()
+                let items = page.data
+                plants = items.map { PlantModel($0) }
+            } catch {
+                print("Request failed with error: \(error)")
+            }
+        }
     }
 }
 
-
 struct PlantCollectionView_Preview: PreviewProvider {
     static var previews: some View {
-        PlantCollectionView()
+        let plantArray = [
+            PlantModel(id: 1, name: "Red Rhapsody Amur Maple", scientificName: "Acer ginnala 'Mondy", thumbnailUrl: ""),
+            PlantModel(id: 2, name: "Red Rhapsody Amur Maple", scientificName: "Acer ginnala 'Mondy", thumbnailUrl: ""),
+            PlantModel(id: 3, name: "Red Rhapsody Amur Maple", scientificName: "Acer ginnala 'Mondy", thumbnailUrl: ""),
+            PlantModel(id: 4, name: "Red Rhapsody Amur Maple", scientificName: "Acer ginnala 'Mondy", thumbnailUrl: "")
+        ]
+        PlantCollectionView(plants: plantArray)
     }
 }
