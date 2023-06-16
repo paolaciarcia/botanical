@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6151DF112A3D20B400BF770C /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6151DF102A3D20B400BF770C /* PlantModel.swift */; };
 		C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */; };
 		C5A9B1BF2A3923E000197418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1BE2A3923E000197418 /* Assets.xcassets */; };
 		C5A9B1C22A3923E000197418 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A9B1C12A3923E000197418 /* Preview Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6151DF102A3D20B400BF770C /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		C5A9B1B72A3923DF00197418 /* Botanical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Botanical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalApp.swift; sourceTree = "<group>"; };
 		C5A9B1BE2A3923E000197418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,9 +54,10 @@
 			isa = PBXGroup;
 			children = (
 				C5A9B1BA2A3923DF00197418 /* BotanicalApp.swift */,
+				C5A9B1C82A39265100197418 /* PlantCollectionView.swift */,
+				6151DF102A3D20B400BF770C /* PlantModel.swift */,
 				C5A9B1BE2A3923E000197418 /* Assets.xcassets */,
 				C5A9B1C02A3923E000197418 /* Preview Content */,
-				C5A9B1C82A39265100197418 /* PlantCollectionView.swift */,
 			);
 			path = Botanical;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				C5A9B1BB2A3923DF00197418 /* BotanicalApp.swift in Sources */,
 				C5A9B1C92A39265100197418 /* PlantCollectionView.swift in Sources */,
+				6151DF112A3D20B400BF770C /* PlantModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
